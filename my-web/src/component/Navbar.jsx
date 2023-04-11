@@ -39,6 +39,7 @@ const Navbar = () => {
                 <Link className='link' to="./?cat=technology">
                     <h6>TECHNOLOGY</h6>
                 </Link>
+                
 
                 <span >{currentUser?.username}</span>
                 {currentUser ? (

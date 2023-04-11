@@ -21,6 +21,10 @@ $lightpurple: #c5f8f8;
             justify-content: center;
             height: 100vh;
             background-color: $lightpurple;
+            .file{
+                text-decoration: underline;
+                cursor: pointer;
+            }
 
             h1{
                 font-size: 20px;
@@ -72,11 +76,14 @@ $lightpurple: #c5f8f8;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            
+           
 
             .logo{ 
                 img{
                     width: 120px;
-                    border-radius: 10%;
+                    border-radius: 10% ;
+                    padding-left: 10%;
                 }
              
 
@@ -138,16 +145,70 @@ $lightpurple: #c5f8f8;
 
 
       .home{
+        .copybutton {
+            display: flex;
+            flex-direction: column;
+            
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+          }
+          
+          .command {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+          }
+          
+          .command span {
+            font-weight: bold;
+            margin-right: 5px;
+          }
+          
+          button {
+            background-color: white;
+            border: 1px solid teal;
+            color: teal;
+            padding:  10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          
+          button:hover {
+            border: 1px solid white;
+            background-color: #c5f8f8;
+            color: black;
+          }
+          
+          input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+          }
+          
          
         .posts{
             margin-top: 50px;
             display: flex;
             flex-direction: column;
-            gap: 150px;
+            gap: 70px;
+            
 
             .post{
                 display: flex;
-                gap: 100px;
+                gap: 50px;
+               
 
                 &:nth-child(2n+1){
                     flex-direction: row-reverse;
@@ -158,6 +219,7 @@ $lightpurple: #c5f8f8;
                     flex: 2;
                     position: relative;
                     height:100%;
+                    
 
                     &::after{
                         content: "";
@@ -177,6 +239,7 @@ $lightpurple: #c5f8f8;
                         object-fit: cover;
                      }
                 }
+                
 
                 .content{
                     flex: 3;
@@ -215,8 +278,60 @@ $lightpurple: #c5f8f8;
 
       //single
         .single{
+            padding-top: 1%;
+            .copybutton {
+                display: flex;
+                flex-direction: column;
+                
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 5px;
+              }
+            .command {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+              }
+              
+              .command span {
+                font-weight: bold;
+                margin-right: 5px;
+              }
+              
+              button {
+                background-color: white;
+                border: 1px solid teal;
+                color: teal;
+                padding:  10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-left: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+              }
+              
+              button:hover {
+                border: 1px solid white;
+                background-color: #c5f8f8;
+                color: black;
+              }
+              
+              input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+              }
             display: flex;
             gap: 50px;
+            
 
             .content{
                 flex: 5;
@@ -228,6 +343,7 @@ $lightpurple: #c5f8f8;
                     width: 100%;
                     height: 300px;
                     object-fit: cover;
+                    
                 }
 
                 .user{
@@ -327,13 +443,13 @@ $lightpurple: #c5f8f8;
 
                 input{
                     padding: 10px;
-                    border: 1px solid lightgray;
+                    border: 1px solid  rgb(243, 4, 4);
                 }
 
                 .editcontainer{
                     height: 300px;
-                    overflow: scroll;
-                    border: 1px solid lightgray;
+                    // overflow: scroll;
+                    // border: 1px solid rgb(243, 4, 4);
 
                     .editor{
                         height: 100%;
@@ -349,7 +465,7 @@ $lightpurple: #c5f8f8;
                 gap: 20px;
 
                 .item{
-                    border: 1px solid lightgray;
+                    border: 1px solid rgb(243, 4, 4);
                     padding: 10px;
                     flex: 1;
                     display: flex;

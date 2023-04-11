@@ -14,6 +14,7 @@ const Write = () => {
   const [file, setFile] = useState(null);
   const [cat, setCat] = useState(state?.cat || '');
   const [errorMessage, setErrorMessage] = useState('');
+  const [error, setMessage] = useState('');
   
 
   const navigate = useNavigate();
@@ -47,8 +48,9 @@ const Write = () => {
    if (!value) {
     setErrorMessage('Please fill the title field');
     return;
-   }else  if (!title) {
-    setErrorMessage('Please fill the description field');
+   }
+    else if (!title) {
+    setMessage('Please fill the description field');
     return;
    }
     const imgUrl = await upload();
@@ -107,6 +109,7 @@ const Write = () => {
           />  
              
         </div>
+        {error && <p className="error" style={{ color: 'red'}}>{error}</p>}
       </div>
       <div className="menu">
         <div className="item">
